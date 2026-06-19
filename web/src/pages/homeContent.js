@@ -2,7 +2,7 @@ export const HOME_CONTENT = {
   en: {
     hero: {
       badge: '#1 COMMUNITY SEARCH RESULTS IN 7 DAYS',
-      title: 'We help brands show up in the community discussions their buyers find on Google.',
+      title: 'Serplore helps brands show up in the community discussions their buyers find on Google.',
       subtitle:
         'If Reddit helped you discover Serplore, you have already seen the channel working. We create helpful community content that ranks on Google and puts your brand in front of high-intent buyers.',
       primaryCta: 'Book a video intro',

@@ -195,7 +195,7 @@ function renderPage({ title, metaDescription, keywords, slug, content, type, pub
   <meta name="twitter:title" content="${escapedTitle}">
   <meta name="twitter:description" content="${escapedDescription}">
   <meta name="twitter:image" content="${escapedOgImage}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   ${schemaArticle}
   ${schemaService}

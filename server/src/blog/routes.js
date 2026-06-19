@@ -13,6 +13,11 @@ const hiddenSlugs = new Set([
   'reddit-promotion-expert',
   'reddit-promotion-service',
 ]);
+const staticPages = [
+  { path: '/terms', priority: '0.5', changefreq: 'yearly' },
+  { path: '/privacy', priority: '0.5', changefreq: 'yearly' },
+  { path: '/cookies', priority: '0.4', changefreq: 'yearly' },
+];
 
 // Load all posts from JSON files
 function loadAllPosts() {
@@ -103,6 +108,16 @@ router.get('/sitemap.xml', (req, res) => {
   </url>
 `;
 
+    for (const page of staticPages) {
+      xml += `
+  <url>
+    <loc>${SITE_URL}${page.path}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`;
+    }
+
     for (const post of posts) {
       const priority = post.type === 'service' ? '0.9' : post.type === 'industry' ? '0.8' : '0.7';
       xml += `
@@ -116,7 +131,8 @@ router.get('/sitemap.xml', (req, res) => {
 
     xml += '\n</urlset>';
 
-    res.set('Content-Type', 'application/xml');
+    res.set('Content-Type', 'application/xml; charset=utf-8');
+    res.set('Cache-Control', 'public, max-age=300, must-revalidate');
     res.send(xml);
   } catch (err) {
     console.error('Sitemap error:', err);
