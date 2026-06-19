@@ -1,0 +1,375 @@
+{
+  "nav": {
+    "home": "Home",
+    "login": "Login",
+    "register": "Get Started",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Launch Your Reddit Presence",
+    "subtitle": "Professional end-to-end Reddit marketing services. We publish posts, post comments, and boost upvotes — so you can focus on what matters.",
+    "cta": "Get Started Free",
+    "ctaSub": "No credit card required to register",
+    "stat24h": "24h Delivery",
+    "statReal": "100% Real Accounts",
+    "statPrice": "$0.20 Per Upvote"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Everything you need to dominate Reddit, handled by our expert team",
+    "post": {
+      "title": "Post Publishing",
+      "price": "$20 / post",
+      "desc": "We publish your post to any subreddit within 24 hours. Includes title, content, and proper formatting to maximize engagement."
+    },
+    "comment": {
+      "title": "Comment Posting",
+      "price": "$10 / comment",
+      "desc": "We post your comment on any Reddit thread within 24 hours. Strategic placement to maximize visibility and engagement."
+    },
+    "upvote": {
+      "title": "Upvote Boost",
+      "price": "$0.20 / upvote",
+      "desc": "Boost your post with real upvotes to increase visibility. Choose your target count and we'll deliver within 24-48 hours."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Four simple steps to Reddit success",
+    "steps": [
+      {
+        "title": "Create Account",
+        "desc": "Sign up for free in seconds. No credit card required to get started."
+      },
+      {
+        "title": "Add Funds",
+        "desc": "Top up your balance securely via Stripe. Multiple amounts available."
+      },
+      {
+        "title": "Submit Order",
+        "desc": "Fill out your order details — subreddit, content, and target metrics."
+      },
+      {
+        "title": "We Deliver",
+        "desc": "Our expert team executes your order within 24-48 hours, guaranteed."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "No hidden fees. Pay only for what you use.",
+    "postTitle": "Post Publishing",
+    "postDesc": "Full service post creation and submission to any subreddit",
+    "commentTitle": "Comment Posting",
+    "commentDesc": "Strategic comment placement on any Reddit thread",
+    "upvoteTitle": "Upvote Boost",
+    "upvoteDesc": "Real upvotes to boost your post visibility",
+    "perPost": "per post",
+    "perComment": "per comment",
+    "perUpvote": "per upvote",
+    "features": {
+      "post": ["Published within 24 hours", "Any subreddit", "Title + content included", "Native formatting", "Delivery confirmation"],
+      "comment": ["Posted within 24 hours", "Any Reddit thread", "Full comment text", "Optimal placement", "Delivery confirmation"],
+      "upvote": ["Delivered within 48 hours", "Real upvotes", "Gradual delivery", "No drop guarantee", "Progress tracking"]
+    }
+  },
+  "geoSection": {
+    "badge": "GEO — Generative Engine Optimization",
+    "title": "If You're Doing GEO, You Need Reddit",
+    "subtitle": "AI search engines like ChatGPT, Perplexity, and Google AI Overview pull answers from Reddit every day. If your brand isn't part of Reddit conversations, you're invisible to the next generation of search. Reddit is no longer optional — it's the foundation of GEO.",
+    "quote": "\"Reddit is the #1 source that AI models cite when answering questions about products, tools, and services. No Reddit presence = No AI visibility.\"",
+    "quoteSource": "The new reality of Generative Engine Optimization",
+    "cta": "Start Your GEO Strategy",
+    "points": {
+      "aiTraining": {
+        "title": "Reddit Is AI Training Data",
+        "desc": "Large language models are trained on massive Reddit datasets. Google's $60M/year deal with Reddit for AI training data proves it — Reddit discussions directly shape what AI models know and recommend."
+      },
+      "aiSearch": {
+        "title": "AI Search Cites Reddit Directly",
+        "desc": "When users ask ChatGPT, Perplexity, or Google Gemini for product recommendations, they pull from Reddit threads. \"Best CRM for startups reddit\" returns answers sourced from actual Reddit discussions."
+      },
+      "brandSignals": {
+        "title": "Reddit Mentions = Brand Authority Signals",
+        "desc": "AI models weigh community consensus heavily. Authentic Reddit discussions, upvotes, and comments about your brand create the trust signals that AI engines use to recommend you over competitors."
+      },
+      "aiOverview": {
+        "title": "Google AI Overview Features Reddit",
+        "desc": "Google's AI Overview prominently features Reddit results for commercial queries. \"Best project management tool\" and similar searches now surface Reddit discussions above traditional SEO results."
+      }
+    },
+    "steps": [
+      {
+        "title": "We Post to Targeted Subreddits",
+        "desc": "Our team creates authentic, value-driven content about your brand in the subreddits where your audience actually discusses solutions."
+      },
+      {
+        "title": "AI Engines Index the Discussions",
+        "desc": "ChatGPT, Perplexity, Google Gemini, and others continuously crawl and index Reddit. Your brand becomes part of the AI knowledge base."
+      },
+      {
+        "title": "Users Discover You Through AI Search",
+        "desc": "When potential customers ask AI for recommendations in your category, your brand appears in the answers — driving high-intent discovery."
+      }
+    ]
+  },
+  "apiSection": {
+    "badge": "AI Agent Ready",
+    "title": "Built for AI Agents & Automation",
+    "subtitle": "Integrate Serplore into your AI workflows with our RESTful API. Create posts, comments, and upvotes programmatically — perfect for AI agents, automation scripts, and custom integrations.",
+    "cta": "Get Your API Key",
+    "features": {
+      "apiKey": {
+        "title": "API Key Authentication",
+        "desc": "Secure API keys with simple header-based auth. Create up to 5 keys, enable/disable anytime."
+      },
+      "restful": {
+        "title": "RESTful API with JSON",
+        "desc": "Clean, versioned endpoints (/v1/) with consistent JSON request/response format. Easy to integrate with any language."
+      },
+      "agentReady": {
+        "title": "AI Agent Friendly",
+        "desc": "Designed for LLM tool-use and AI agent frameworks. Simple request/response patterns, clear error codes, predictable behavior."
+      },
+      "rateLimit": {
+        "title": "Rate Limiting & Logging",
+        "desc": "60 requests/minute with standard rate limit headers. Full API call logging for monitoring and debugging."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our services",
+    "items": [
+      {
+        "q": "How quickly will my order be completed?",
+        "a": "Post publishing and comment posting are completed within 24 hours. Upvote boosts are typically delivered within 24-48 hours depending on the quantity ordered."
+      },
+      {
+        "q": "Are the upvotes real?",
+        "a": "Yes, all upvotes come from real Reddit accounts. We do not use bots or automated tools. Our network consists of genuine Reddit users who engage with content."
+      },
+      {
+        "q": "What subreddits do you support?",
+        "a": "We support most subreddits except those with extremely strict posting requirements or those focused on illegal activities. We'll notify you within 2 hours if we cannot fulfill your specific subreddit request."
+      },
+      {
+        "q": "What is your refund policy?",
+        "a": "Due to the nature of our services, all purchases are final. However, if we are unable to fulfill your order for any reason, we will provide a full credit to your account balance."
+      },
+      {
+        "q": "Is my payment information secure?",
+        "a": "Absolutely. We use Stripe for all payment processing — a PCI DSS Level 1 certified payment processor. We never store your card details on our servers."
+      },
+      {
+        "q": "Can I track the status of my order?",
+        "a": "Yes. Your dashboard shows real-time status updates for all orders: Submitted, Processing, Published/Completed, or Failed. You'll be able to see exactly where your order stands at any time."
+      },
+      {
+        "q": "What happens if my post gets removed?",
+        "a": "If a post is removed by Reddit moderators within 24 hours of publishing, we will re-submit at no additional charge or provide an account credit, depending on your preference."
+      },
+      {
+        "q": "Do you require my Reddit account credentials?",
+        "a": "No. We use our own network of Reddit accounts to fulfill all orders. You never need to share your personal Reddit credentials with us."
+      },
+      {
+        "q": "Do you offer an API for automation?",
+        "a": "Yes! We provide a full RESTful API that supports all core operations — posts, comments, and upvotes. Generate your API key from the dashboard and start integrating with your AI agents or automation scripts in minutes."
+      }
+    ]
+  },
+  "blogPreview": {
+    "title": "From Our Blog",
+    "subtitle": "Expert guides and strategies to help you succeed on Reddit",
+    "viewAll": "View All Articles",
+    "post1Title": "How to Promote on Reddit: The Complete Guide",
+    "post1Desc": "Master Reddit culture, the 10% rule, subreddit selection, and content strategies that actually drive results.",
+    "post2Title": "Reddit Marketing Strategy: A Framework for 2026",
+    "post2Desc": "A step-by-step strategic framework for building a sustainable, high-ROI Reddit marketing presence.",
+    "post3Title": "How to Promote on Reddit Without Getting Banned",
+    "post3Desc": "Learn Reddit's content policies, avoid shadow bans, and promote your brand safely and effectively."
+  },
+  "cta": {
+    "title": "Ready to dominate Reddit?",
+    "subtitle": "Join hundreds of marketers who trust Serplore to grow their Reddit presence.",
+    "hasAccount": "Already have an account? Sign in"
+  },
+  "footer": {
+    "desc": "Professional Reddit marketing services for businesses and individuals.",
+    "legal": "Legal",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "resources": "Resources",
+    "blog": "Blog",
+    "apiDocs": "API Docs",
+    "support": "Support",
+    "contact": "Contact Us",
+    "email": "support@serplore.com",
+    "rights": "All rights reserved.",
+    "company": "Serplore LLC"
+  },
+  "auth": {
+    "loginTitle": "Welcome Back",
+    "loginSubtitle": "Sign in to your Serplore account",
+    "registerTitle": "Create Your Account",
+    "registerSubtitle": "Start your Reddit marketing journey today",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "loginBtn": "Sign In",
+    "registerBtn": "Create Account",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signUp": "Sign up",
+    "signIn": "Sign in",
+    "forgotPassword": "Forgot password?",
+    "emailPlaceholder": "you@example.com",
+    "passwordPlaceholder": "Minimum 6 characters",
+    "confirmPlaceholder": "Re-enter your password",
+    "passwordMismatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "loginError": "Invalid email or password",
+    "registerError": "Registration failed. Please try again.",
+    "loggingIn": "Signing in...",
+    "registering": "Creating account..."
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "balance": "Balance",
+    "addFunds": "Add Funds",
+    "tabs": {
+      "submitPost": "Submit Post",
+      "submitComment": "Submit Comment",
+      "submitUpvotes": "Submit Upvotes",
+      "myOrders": "My Orders",
+      "addFunds": "Add Funds",
+      "apiKeys": "API Keys",
+      "apiDocs": "API Docs"
+    },
+    "post": {
+      "title": "Submit a Post",
+      "subreddit": "Subreddit",
+      "subredditPlaceholder": "e.g. r/technology",
+      "postTitle": "Post Title",
+      "postTitlePlaceholder": "Enter your post title",
+      "postContent": "Post Content",
+      "postContentPlaceholder": "Enter your post content...",
+      "cost": "Service Fee",
+      "submit": "Submit Post Order",
+      "submitting": "Submitting...",
+      "success": "Post order submitted successfully!",
+      "insufficientFunds": "Insufficient balance. Please add funds."
+    },
+    "comment": {
+      "title": "Submit a Comment",
+      "postUrl": "Reddit Post URL",
+      "postUrlPlaceholder": "https://reddit.com/r/...",
+      "content": "Comment Content",
+      "contentPlaceholder": "Enter your comment...",
+      "cost": "Service Fee",
+      "submit": "Submit Comment Order",
+      "submitting": "Submitting...",
+      "success": "Comment order submitted successfully!",
+      "insufficientFunds": "Insufficient balance. Please add funds."
+    },
+    "upvote": {
+      "title": "Submit Upvotes",
+      "postUrl": "Reddit Post URL",
+      "postUrlPlaceholder": "https://reddit.com/r/...",
+      "targetCount": "Target Upvotes",
+      "targetPlaceholder": "e.g. 100",
+      "costCalc": "Cost Calculation",
+      "totalCost": "Total Cost",
+      "submit": "Submit Upvote Order",
+      "submitting": "Submitting...",
+      "success": "Upvote order submitted successfully!",
+      "insufficientFunds": "Insufficient balance. Please add funds."
+    },
+    "orders": {
+      "title": "My Orders",
+      "noOrders": "No orders yet. Submit your first order to get started!",
+      "type": "Type",
+      "status": "Status",
+      "cost": "Cost",
+      "date": "Date",
+      "summary": "Details",
+      "post": "Post",
+      "comment": "Comment",
+      "upvote": "Upvote",
+      "statuses": {
+        "submitted": "Submitted",
+        "processing": "Processing",
+        "published": "Published",
+        "completed": "Completed",
+        "failed": "Failed"
+      }
+    },
+    "funds": {
+      "title": "Add Funds to Your Account",
+      "subtitle": "Select an amount to top up your balance via Stripe",
+      "selectAmount": "Select Amount",
+      "secure": "Secured by Stripe. Your payment info is never stored on our servers.",
+      "processing": "Processing..."
+    },
+    "apiKeys": {
+      "title": "API Keys",
+      "subtitle": "Create and manage API keys for programmatic access. Maximum 5 keys per account.",
+      "namePlaceholder": "Key name, e.g. My AI Agent",
+      "create": "Create Key",
+      "creating": "Creating...",
+      "loading": "Loading...",
+      "noKeys": "No API keys yet. Create one to start using the API.",
+      "maxReached": "Maximum 5 API keys reached. Delete an existing key to create a new one.",
+      "active": "Active",
+      "disabled": "Disabled",
+      "enable": "Enable",
+      "disable": "Disable",
+      "delete": "Delete",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "created": "Created",
+      "lastUsed": "Last used",
+      "confirmDelete": "Are you sure you want to delete this API key? Any integrations using it will stop working."
+    },
+    "apiDocs": {
+      "title": "API Documentation",
+      "subtitle": "Complete reference for the Serplore REST API. Use your API key to authenticate all requests.",
+      "authTitle": "Authentication",
+      "authDesc": "All API requests require authentication via API key. You can pass it in the X-API-Key header (recommended) or as a Bearer token in the Authorization header.",
+      "endpointsTitle": "Endpoints",
+      "getBalance": "Get your current account balance.",
+      "getUsage": "Get usage statistics (total orders and spend by type).",
+      "createPost": "Submit a new Reddit post order. Costs $20 per post.",
+      "createComment": "Submit a new comment order on any Reddit post. Costs $10 per comment.",
+      "createUpvote": "Submit a new upvote order. Costs $0.20 per upvote.",
+      "listOrders": "List all your orders with pagination. Optionally filter by type (post, comment, upvote).",
+      "getOrder": "Get details of a specific order by type and ID.",
+      "responseTitle": "Response Format",
+      "responseDesc": "All API responses follow a consistent JSON format with a success boolean and either a data object or an error object.",
+      "successExample": "Success Response",
+      "errorExample": "Error Response",
+      "errorsTitle": "Error Codes",
+      "description": "Description",
+      "unauthorizedDesc": "No API key provided or invalid format",
+      "invalidKeyDesc": "API key not found in our system",
+      "disabledKeyDesc": "API key has been disabled by the owner",
+      "missingFieldsDesc": "Required request body fields are missing",
+      "insufficientDesc": "Account balance is too low for this operation",
+      "rateLimitDesc": "Too many requests — wait and retry",
+      "notFoundDesc": "The requested order was not found",
+      "rateLimitTitle": "Rate Limiting",
+      "rateLimitDesc": "API requests are limited to 60 per minute per API key. Rate limit info is returned in response headers: X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset (seconds until reset)."
+    }
+  },
+  "payment": {
+    "successTitle": "Payment Successful!",
+    "successDesc": "Your account has been topped up successfully. Your new balance will be reflected in your dashboard shortly.",
+    "cancelTitle": "Payment Cancelled",
+    "cancelDesc": "Your payment was cancelled. No charges were made to your account.",
+    "backToDashboard": "Back to Dashboard",
+    "tryAgain": "Try Again"
+  }
+}
