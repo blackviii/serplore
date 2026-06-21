@@ -5,7 +5,6 @@ const SITE_NAME = 'Serplore';
 const BRAND_COLOR = '#FF4500';
 const BRAND_COLOR_HOVER = '#DB3A00';
 const BRAND_COLOR_RGB = '255,69,0';
-const LOGO_ICON_SVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="64" height="64" rx="14" fill="currentColor"/><path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M16 48V16h19c7.2 0 12.4 4.7 12.4 11.3 0 5.1-3.1 9-7.9 10.4L48 48H36.2l-7.5-10H26v10H16Zm10-18.5h8.4c2.5 0 4.2-1.5 4.2-3.7S36.9 22 34.4 22H26v7.5Z"/></svg>';
 
 function escapeHtml(value) {
   return String(value || '')
@@ -196,7 +195,11 @@ function renderPage({ title, metaDescription, keywords, slug, content, type, pub
   <meta name="twitter:description" content="${escapedDescription}">
   <meta name="twitter:image" content="${escapedOgImage}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   ${schemaArticle}
   ${schemaService}
   ${schemaBreadcrumb}
@@ -209,10 +212,8 @@ function renderPage({ title, metaDescription, keywords, slug, content, type, pub
     /* Header */
     .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7eb; }
     .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
-    .logo-link { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-    .logo-icon { width: 28px; height: 28px; color: ${BRAND_COLOR}; display: flex; align-items: center; justify-content: center; }
-    .logo-icon svg { display: block; width: 100%; height: 100%; }
-    .logo-text { font-weight: 700; font-size: 14px; color: #111; }
+    .logo-link { display: flex; align-items: center; text-decoration: none; }
+    .logo-img { display: block; width: 148px; height: auto; }
     .header-nav { display: flex; gap: 24px; align-items: center; }
     .header-nav a { color: #666; font-size: 14px; font-weight: 500; }
     .header-nav a:hover { color: #111; text-decoration: none; }
@@ -280,10 +281,7 @@ function renderPage({ title, metaDescription, keywords, slug, content, type, pub
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo-link">
-        <div class="logo-icon">
-          ${LOGO_ICON_SVG}
-        </div>
-        <span class="logo-text">${SITE_NAME}</span>
+        <img src="/logo.svg" alt="Serplore" class="logo-img" width="148" height="37">
       </a>
       <nav class="header-nav">
         <a href="/blog" class="hide-mobile">Blog</a>

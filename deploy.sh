@@ -62,6 +62,39 @@ ssh -i "$SSH_KEY" -o BatchMode=yes -o StrictHostKeyChecking=no "$SERVER" "
   if [ -f \"\$nginx_conf\" ]; then
     cp \"\$nginx_conf\" \"\$nginx_conf.bak-serplore-\$(date +%Y%m%d%H%M%S)\"
     perl -0pi -e 's#proxy_pass\\s+http://127\\.0\\.0\\.1:\\d+;#proxy_pass http://127.0.0.1:3465;#g' \"\$nginx_conf\"
+    tmp_nginx_conf=\$(mktemp)
+    awk '
+      /#PROXY-CONF-START/ {
+        print
+        print \"    location ^~ / {\"
+        print \"      proxy_pass http://127.0.0.1:3465;\"
+        print \"      proxy_set_header Host \$http_host;\"
+        print \"      proxy_set_header X-Real-IP \$remote_addr;\"
+        print \"      proxy_set_header X-Real-Port \$remote_port;\"
+        print \"      proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;\"
+        print \"      proxy_set_header X-Forwarded-Proto \$scheme;\"
+        print \"      proxy_set_header X-Forwarded-Host \$host;\"
+        print \"      proxy_set_header X-Forwarded-Port \$server_port;\"
+        print \"      proxy_set_header REMOTE-HOST \$remote_addr;\"
+        print \"      proxy_connect_timeout 60s;\"
+        print \"      proxy_send_timeout 600s;\"
+        print \"      proxy_read_timeout 600s;\"
+        print \"      proxy_http_version 1.1;\"
+        print \"      proxy_set_header Upgrade \$http_upgrade;\"
+        print \"      proxy_set_header Connection \$connection_upgrade;\"
+        print \"    }\"
+        skip=1
+        next
+      }
+      /#PROXY-CONF-END/ {
+        skip=0
+        print
+        next
+      }
+      !skip { print }
+    ' \"\$nginx_conf\" > \"\$tmp_nginx_conf\"
+    cat \"\$tmp_nginx_conf\" > \"\$nginx_conf\"
+    rm -f \"\$tmp_nginx_conf\"
   else
     cat > \"\$nginx_conf\" <<'NGINX'
 server {

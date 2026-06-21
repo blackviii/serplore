@@ -7,6 +7,7 @@ const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, '../../data');
 const SITE_URL = (process.env.SITE_URL || 'https://serplore.com').replace(/\/+$/, '');
 const VISITOR_INDEX_FILE = path.join(DATA_DIR, 'visitor-index.json');
 const GEO_TIMEOUT_MS = 1200;
+const HUMAN_NOTIFICATION_THRESHOLD = 60;
 
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
@@ -263,20 +264,64 @@ function isLikelyHostingProvider(isp) {
 }
 
 function isLikelyAutomatedVisit(entry) {
+  return classifyVisitAudience(entry).human_probability < HUMAN_NOTIFICATION_THRESHOLD;
+}
+
+function classifyVisitAudience(entry) {
   const ua = entry.user_agent || '';
   const timezone = entry.timezone || '';
   const language = entry.language || '';
   const pathName = entry.page_path || entry.path || '';
   const geoIsp = entry.geo?.isp || '';
   const screen = `${entry.screen_width || ''}x${entry.screen_height || ''}`;
+  const viewport = `${entry.viewport_width || ''}x${entry.viewport_height || ''}`;
+  const reasons = [];
+  let score = 70;
 
-  if (isLikelyBot(ua) || isSuspiciousPath(pathName)) return true;
-  if (entry.ip === 'unknown') return true;
-  if (/utc|etc\/unknown/i.test(timezone) && /posix/i.test(language)) return true;
-  if (/utc|etc\/unknown/i.test(timezone) && /^(800x600|1280x720|1600x1200|1920x1080)$/.test(screen)) return true;
-  if (isLikelyHostingProvider(geoIsp) && (/utc|etc\/unknown/i.test(timezone) || /x11; linux/i.test(ua))) return true;
+  const addReason = (delta, reason) => {
+    score += delta;
+    reasons.push(`${reason} (${delta > 0 ? '+' : ''}${delta})`);
+  };
 
-  return false;
+  if (isLikelyBot(ua)) addReason(-85, 'bot-like user agent');
+  if (isSuspiciousPath(pathName)) addReason(-75, 'scanner/suspicious path');
+  if (entry.ip === 'unknown') addReason(-45, 'missing client IP');
+
+  if (entry.visitor_id && entry.session_id) addReason(8, 'client visitor/session ids present');
+  else addReason(-12, 'missing client visitor/session id');
+
+  if (timezone && !/utc|etc\/unknown/i.test(timezone)) addReason(8, 'real browser timezone');
+  if (language && !/posix/i.test(language)) addReason(6, 'browser language present');
+  if (entry.screen_width && entry.screen_height && entry.viewport_width && entry.viewport_height) {
+    addReason(8, `screen and viewport present ${screen}/${viewport}`);
+  }
+  if (entry.accept_language) addReason(4, 'accept-language header present');
+
+  if (/utc|etc\/unknown/i.test(timezone) && /posix/i.test(language)) {
+    addReason(-40, 'UTC/unknown timezone with POSIX language');
+  }
+  if (/utc|etc\/unknown/i.test(timezone) && /^(800x600|1280x720|1600x1200|1920x1080)$/.test(screen)) {
+    addReason(-28, 'automation-like timezone and screen size');
+  }
+  if (/x11; linux/i.test(ua)) addReason(-12, 'Linux X11 browser fingerprint');
+  if (isLikelyHostingProvider(geoIsp)) {
+    addReason(-18, 'hosting-provider ISP');
+    if (/utc|etc\/unknown/i.test(timezone) || /x11; linux/i.test(ua)) {
+      addReason(-28, 'hosting-provider traffic with automation-like fingerprint');
+    }
+  }
+
+  if (reasons.length === 0) reasons.push('limited browser evidence');
+
+  const humanProbability = Math.max(0, Math.min(99, Math.round(score)));
+  const isHumanLikely = humanProbability >= HUMAN_NOTIFICATION_THRESHOLD;
+
+  return {
+    human_probability: humanProbability,
+    classification: isHumanLikely ? 'real_human_likely' : 'bot_or_automation_likely',
+    visit_audience: isHumanLikely ? 'human_likely' : 'automated_or_hosted',
+    reasons,
+  };
 }
 
 function normalizeString(value, maxLength) {
@@ -381,9 +426,15 @@ async function recordVisit(req, rawPayload) {
     first_seen: indexState.first_seen,
     ...visitor,
   };
-  const automated = isLikelyAutomatedVisit(entry);
-  entry.visit_audience = automated ? 'automated_or_hosted' : 'human_likely';
-  entry.notification_suppressed = automated || !entry.is_new_visitor;
+  const audience = classifyVisitAudience(entry);
+  entry.visit_audience = audience.visit_audience;
+  entry.visit_classification = audience.classification;
+  entry.human_probability = audience.human_probability;
+  entry.classification_reasons = audience.reasons;
+  entry.notification_suppressed = entry.human_probability < HUMAN_NOTIFICATION_THRESHOLD || !entry.is_new_visitor;
+  entry.notification_suppression_reason = entry.notification_suppressed
+    ? (entry.human_probability < HUMAN_NOTIFICATION_THRESHOLD ? 'bot_or_automation_likely' : 'repeat_visitor')
+    : '';
 
   appendJsonl('visits.jsonl', entry);
   appendJsonl('events.jsonl', { type: 'visit', ...entry });
@@ -393,6 +444,9 @@ async function recordVisit(req, rawPayload) {
   void sendDiscord(
     [
       'New Serplore visitor',
+      `Real/bot judgment: ${entry.visit_classification === 'real_human_likely' ? 'likely real human' : 'likely bot/automation'}`,
+      `Human likelihood: ${entry.human_probability}%`,
+      `Signals: ${escapeDiscord(entry.classification_reasons.join('; '), 500)}`,
       `Time (LA): ${entry.time_la}`,
       `Visitor ID: ${entry.visitor_id || 'not provided'}`,
       `Session ID: ${entry.session_id || 'not provided'}`,

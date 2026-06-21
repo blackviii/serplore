@@ -2,12 +2,12 @@ export const HOME_CONTENT = {
   en: {
     hero: {
       badge: '#1 COMMUNITY SEARCH RESULTS IN 7 DAYS',
-      title: 'Serplore helps brands show up in the community discussions their buyers find on Google.',
+      title: 'Reddit SEO for Google Search Visibility',
       subtitle:
-        'If Reddit helped you discover Serplore, you have already seen the channel working. We create helpful community content that ranks on Google and puts your brand in front of high-intent buyers.',
+        'Serplore builds search-visible Reddit discussions that help brands appear in Google results, guide buyer research, and manage reputation before prospects choose a vendor.',
       primaryCta: 'Book a video intro',
       secondaryCta: 'What we do',
-      ctaSub: 'In a short Google Meet intro, we will show how Reddit search visibility can work for your brand.',
+      ctaSub: 'In a short Google Meet intro, we will show how Reddit SEO for Google Search can work for your brand.',
       queryChips: ['best [category] reddit', '[brand] reviews reddit', '[competitor] alternative', 'is [brand] legit'],
       panelLabel: 'Search opportunity',
       panelTitle: 'From query to Reddit thread',
