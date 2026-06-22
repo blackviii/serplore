@@ -50,7 +50,7 @@ function SectionHeader({ eyebrow, title, subtitle, align = 'center' }) {
           {eyebrow}
         </div>
       )}
-      <h2 className="text-3xl font-bold leading-tight text-gray-950 sm:text-4xl">{title}</h2>
+      <h2 className="max-w-full break-words text-3xl font-bold leading-tight text-gray-950 sm:text-4xl">{title}</h2>
       {subtitle && <p className="mt-4 text-base leading-8 text-gray-600 sm:text-lg">{subtitle}</p>}
     </div>
   )
@@ -81,13 +81,64 @@ function Hero({ content }) {
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="#services"
+            href="#proof"
             className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition-colors hover:border-gray-400"
           >
             {content.hero.secondaryCta}
           </a>
         </div>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-500">{content.hero.ctaSub}</p>
+      </div>
+    </section>
+  )
+}
+
+function SearchProof({ content }) {
+  return (
+    <section id="proof" className="bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-orange-700">
+            {content.proof.eyebrow}
+          </div>
+          <h2 className="break-words text-3xl font-bold leading-tight text-gray-950 sm:text-5xl">
+            {content.proof.titleBefore}{' '}
+            <span className="whitespace-nowrap rounded-lg bg-orange-50 px-2 text-orange-700">{content.proof.pageHighlight}</span>
+            <br className="hidden sm:block" />
+            {' '}{content.proof.titleMiddle}{' '}
+            <span className="whitespace-nowrap rounded-lg bg-orange-50 px-2 text-orange-700">{content.proof.timeHighlight}</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-gray-600 sm:text-lg">
+            {content.proof.subtitle}
+          </p>
+        </div>
+
+        <div className="mt-12 grid min-w-0 gap-8">
+          {content.proof.steps.map((step, index) => (
+            <div key={step.title} className="min-w-0 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+              <div className="border-b border-gray-200 bg-gray-50 px-5 py-5 sm:px-7">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gray-950 text-sm font-bold text-white">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-950 sm:text-2xl">{step.title}</h3>
+                    <p className="mt-2 max-w-3xl text-sm leading-7 text-gray-600 sm:text-base">{step.desc}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-3 sm:p-5">
+                <img
+                  src={step.image}
+                  alt={step.alt}
+                  className="aspect-[16/9] w-full max-w-full rounded-md border border-gray-100 bg-gray-50 object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -312,9 +363,8 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero content={content} />
-      <Services content={content} />
+      <SearchProof content={content} />
       <Reputation content={content} />
-      <Approach content={content} />
       <Consultation content={content} />
       <Footer />
     </div>

@@ -10,14 +10,11 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <a href="/#services" className="hidden px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-950 sm:inline-flex">
-            Services
+          <a href="/#proof" className="hidden px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-950 sm:inline-flex">
+            How it works
           </a>
           <a href="/#reputation" className="hidden px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-950 md:inline-flex">
             Reputation
-          </a>
-          <a href="/#approach" className="hidden px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-950 md:inline-flex">
-            Approach
           </a>
           <a href="/blog" className="hidden px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-950 sm:inline-flex">
             Blog

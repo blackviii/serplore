@@ -6,7 +6,7 @@ export const HOME_CONTENT = {
       subtitle:
         'Serplore builds search-visible Reddit discussions that help brands appear in Google results, guide buyer research, and manage reputation before prospects choose a vendor.',
       primaryCta: 'Book a video intro',
-      secondaryCta: 'What we do',
+      secondaryCta: 'See how it works',
       ctaSub: 'In a short Google Meet intro, we will show how Reddit SEO for Google Search can work for your brand.',
       queryChips: ['best [category] reddit', '[brand] reviews reddit', '[competitor] alternative', 'is [brand] legit'],
       panelLabel: 'Search opportunity',
@@ -39,6 +39,29 @@ export const HOME_CONTENT = {
       panelNoteTitle: 'The outcome',
       panelNote:
         'Positive, useful Reddit conversations that can show up when prospects compare tools, read reviews, or ask AI search for recommendations.',
+    },
+    proof: {
+      eyebrow: 'How it works',
+      titleBefore: 'We help Reddit threads appear on',
+      pageHighlight: 'Page #1',
+      titleMiddle: 'and show real movement in',
+      timeHighlight: '1-2 weeks',
+      subtitle:
+        'First, we create a Reddit-native post that can surface for a buyer search. Then the main post gives the brand visible, contextual exposure where search visitors read first.',
+      steps: [
+        {
+          title: 'The Reddit result can show up on Google Page #1',
+          desc: 'We target buyer queries where Google already favors community discussions, then build the Reddit post around that search intent.',
+          image: '/proof-google-serp.svg',
+          alt: 'Annotated Google results screenshot showing a Reddit result on the first page',
+        },
+        {
+          title: 'The main post gives the brand exposure',
+          desc: 'The brand appears inside the post body itself, so the exposure is visible in the discussion people actually click and read.',
+          image: '/proof-reddit-post.svg',
+          alt: 'Annotated Reddit post screenshot showing a highlighted brand mention',
+        },
+      ],
     },
     services: {
       header: {

@@ -1,0 +1,73 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Reddit post proof</title>
+  <desc id="desc">A styled Reddit post screenshot with a highlighted brand mention in the main post.</desc>
+  <rect width="1600" height="900" fill="#f6f7fb"/>
+
+  <rect width="1600" height="72" fill="#ffffff"/>
+  <line y1="72" x2="1600" y2="72" stroke="#d8dde6"/>
+  <text x="30" y="48" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#ff4500">reddit</text>
+  <rect x="498" y="14" width="604" height="44" rx="22" fill="#edf2f7"/>
+  <circle cx="534" cy="36" r="10" stroke="#3f4652" stroke-width="3"/>
+  <path d="M542 44L554 56" stroke="#3f4652" stroke-width="3" stroke-linecap="round"/>
+  <rect x="568" y="21" width="162" height="30" rx="15" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="590" y="42" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#334155">r/SEOeCommerce</text>
+  <text x="748" y="43" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#64748b">Search in r/SEOeCommerce</text>
+
+  <g transform="translate(34 132)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#475569">Home</text>
+    <text x="0" y="58" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#475569">Popular</text>
+    <text x="0" y="116" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#475569">News</text>
+    <line x1="0" y1="184" x2="246" y2="184" stroke="#e5e7eb"/>
+    <text x="0" y="232" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="3" fill="#8190a0">GAMES ON REDDIT</text>
+    <rect x="0" y="258" width="222" height="78" rx="18" fill="#38a8ee"/>
+    <circle cx="36" cy="297" r="22" fill="#0f172a"/>
+    <text x="70" y="294" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Bubble Shooter Pro</text>
+    <text x="70" y="320" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#0f172a">Pop Bubbles!!</text>
+  </g>
+
+  <line x1="276" y1="132" x2="276" y2="858" stroke="#d5d9e1"/>
+
+  <g transform="translate(366 110)">
+    <circle cx="0" cy="46" r="20" fill="#dceafe"/>
+    <path d="M8 36L-2 46L8 56" stroke="#0f172a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="62" cy="46" r="24" fill="#dff2ff" stroke="#bfdbfe"/>
+    <text x="47" y="55" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#ff4f78">&lt;/&gt;</text>
+    <text x="100" y="42" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#064e80">r/SEOeCommerce</text>
+    <text x="100" y="68" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#2563eb">Brand Affiliate</text>
+
+    <text x="16" y="136" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#0f172a">What are the top eCommerce SEO agencies in the US right now</text>
+    <text x="16" y="182" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#0f172a">(2026)?</text>
+
+    <text x="16" y="246" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">Hey everyone,</text>
+    <text x="16" y="304" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">I've been trying to shortlist a few eCommerce SEO agencies in the US for a project this year, and honestly most</text>
+    <text x="16" y="336" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">"top agency" lists online feel super promotional or outdated.</text>
+    <text x="16" y="398" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">So I spent some time digging through case studies, client feedback, and what each agency actually focuses on.</text>
+    <text x="16" y="430" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">Sharing a few that seem legit based on what I found.</text>
+
+    <rect x="0" y="472" width="914" height="158" rx="4" fill="#ffffff"/>
+    <rect x="-14" y="458" width="942" height="186" rx="4" fill="none" stroke="#ff4d4d" stroke-width="6"/>
+    <text x="16" y="510" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#0b3f75">1. ResultFirst</text>
+    <text x="16" y="548" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">From what I see, they position themselves around performance-based SEO. That might be interesting if you don't</text>
+    <text x="16" y="580" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">want to commit to large retainers upfront. Seems like they work a lot with enterprise and large eCommerce</text>
+    <text x="16" y="612" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">brands. Worth checking if you're looking for outcome-driven engagement.</text>
+
+    <text x="16" y="686" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#0b3f75">2. OuterBox</text>
+    <text x="16" y="722" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#0b3f75">They seem very eCommerce-focused, especially with platforms like Shopify and BigCommerce.</text>
+  </g>
+
+  <g transform="translate(1264 116)">
+    <rect width="286" height="690" rx="12" fill="#e9eef8"/>
+    <text x="26" y="70" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" fill="#334155">r/SEOeCommerce</text>
+    <text x="26" y="122" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#075985">SEOeCommerce</text>
+    <text x="26" y="156" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#0f77d9">A place for people who actually work on</text>
+    <text x="26" y="184" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#0f77d9">ecommerce SEO. We talk about real</text>
+    <text x="26" y="212" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#0f77d9">problems, tests, and mistakes...</text>
+    <text x="26" y="382" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#0f172a">18</text>
+    <text x="26" y="414" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0f77d9">Weekly visitors</text>
+    <line x1="0" y1="456" x2="286" y2="456" stroke="#d1d9e6"/>
+    <text x="26" y="510" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#075985">R/SEOECOMMERCE RULES</text>
+    <text x="52" y="560" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0f77d9">Don't Spam</text>
+    <text x="52" y="612" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#0f77d9">Keep It SEO-Focused</text>
+  </g>
+
+</svg>
